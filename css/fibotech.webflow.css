@@ -2163,6 +2163,27 @@
 
 @media screen and (max-width: 768px)  {
   /* Your mobile styles go here */
+
+  .mobile-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(18, 18, 18, 0.95);
+  z-index: 9999;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.mobile-nav.open {
+  display: flex;
+  transform: translateY(0%);
+  opacity: 1;
+}
   .hamburger {
     display: flex;
     margin-right: 30px;
