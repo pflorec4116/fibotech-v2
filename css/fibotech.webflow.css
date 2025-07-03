@@ -578,6 +578,7 @@
   align-items: center;
   margin-top: 69px;
   display: flex;
+  padding-bottom: 75px;
 }
 
 .text-block-7 {
@@ -600,7 +601,12 @@
   border: 2px solid #0000;
   border-radius: 12px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
 
 .button-yellow-soluciones {
   text-align: center;
@@ -633,7 +639,7 @@
   background-color: #1b1b1b;
   min-height: 90vh;
   padding-top: 60px;
-  padding-bottom: 26px;
+  padding-bottom: 45px;
 }
 
 .text-block-9 {
@@ -665,6 +671,7 @@
   padding-bottom: 1px;
   padding-left: 25px;
   padding-right: 25px;
+  gap: 150px;
 }
 
 .image-5 {
@@ -2108,6 +2115,13 @@
   gap: 1rem;
 }
 
+@media screen and (max-width: 490px) {
+  .button-transparent {
+    min-width: 125%;
+    
+  }
+
+
 
 @media screen and (max-width: 479px) {
   .hero {
@@ -2163,6 +2177,46 @@
 
 @media screen and (max-width: 768px)  {
   /* Your mobile styles go here */
+
+    /* Ensure product-card height is only determined by content */
+    .product-card {
+     height: auto; /* important if the parent uses align-items: stretch */
+  min-height: 200px; /* adjust to fit your tallest card */
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+    }
+    .header3.kyc {
+  margin-top: 0px;
+}
+
+    .products-grid {
+      display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 0;
+  padding: 0 1rem;
+  align-items: stretch;
+    }
+
+
+
+.paragraph {
+  display: none;
+}
+
+
+
+
+.servicios-section-sr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
   .mobile-nav {
   display: none;
@@ -2266,7 +2320,6 @@ margin-right: 0px;
   .w-layout-grid {
     display: flex;
     flex-direction: column;
-    width: 80%;
     text-align: center;
 
 
@@ -3002,6 +3055,11 @@ margin-right: 0px;
   border: 2px solid #0000;
   border-radius: 12px;
   padding: 20px;
+   min-width: 400px;
+}
+
+.image-5 {
+  min-width: 75%;
 }
 
 .button-yellow-soluciones {
@@ -3086,10 +3144,12 @@ margin-right: 0px;
   justify-content: center;
   align-items: center;
   max-width: 230px;
-  min-height: 570px;
-  max-height: 570px;
   padding: 15px;
   display: flex;
+   width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .image-6 {
@@ -3119,11 +3179,11 @@ margin-right: 0px;
   align-items: center;
   min-height: 35px;
   max-height: 35px;
-  margin-left: 0;
-  margin-right: 0;
   text-decoration: none;
   display: flex;
   position: static;
+  font-size: 10px;
+  text-align: center;
 }
 
 .button-transparent:hover {
@@ -3133,17 +3193,15 @@ margin-right: 0px;
 
 .header3 {
   margin-bottom: 20px;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+
 }
 
-.header3.kyc {
-  margin-top: 9px;
-}
 
 .products-grid {
-  grid-column-gap: 65px;
-  grid-row-gap: 65px;
+  grid-column-gap: 30px;
   justify-content: center;
   align-items: center;
   margin-bottom: 36px;
@@ -3474,7 +3532,7 @@ margin-right: 0px;
 }
 
 .text-block-33 {
-  text-align: left;
+  text-align: center;
   max-width: 250px;
   margin-bottom: 16px;
   padding-left: 15px;
@@ -3490,7 +3548,7 @@ margin-right: 0px;
 }
 
 .text-block-34 {
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 15px;
   padding-left: 15px;
@@ -4517,7 +4575,9 @@ margin-right: 0px;
     background-size: cover;
     background-attachment: scroll;
   }
-
+.button-transparent {
+    min-width: 150%;
+}
   .menu-link {
     overflow: visible;
   }
